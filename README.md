@@ -8,7 +8,7 @@
 
 + 能按照一定规范进行统一某类相对复杂业务的逻辑处理,使用简单且易上手
 
-+ 能按照实现业务所分解的核心步骤来进行相应方法的显示调用
++ 能按照实现业务所分解的核心步骤来进行相应方法的显式调用
 
 + 能提供通用能力且灵活性高,能支持复杂场景的自定义处理(例:解析器可注册为spring bean不影响所依赖框架的使用)
 
@@ -21,10 +21,10 @@
 调用方式: 选择业务执行器,并通过传入业务参数,业务上下文对象以及指定该业务的解析器获取到实例后进行执行并获取返回结果
 
 ```
-    //方式一: 不指定过程的调用(全部实现逻辑内部进行把控)
+    //方式一: 不指定过程的调用(实现逻辑在内部进行把控)
     String result = BizActuator.of(bizParameter, bizContext, bizResolver).execute();
     
-    //方式二: 指定过程(即所分解步骤)显示的执行调用(注: appendConsumer只添加非重写的自定义顺序方法)
+    //方式二: 指定过程(即所分解步骤)显式的执行调用(注: appendConsumer只添加非重写的自定义顺序方法)
     String result = BizRichActuator.of(bizParameter, bizContext, bizResolver)
                     .appendConsumer(bizResolver::first)
                     .appendConsumer(bizResolver::second)
