@@ -2,7 +2,7 @@ package com.joker17.bizactuator.example;
 
 import com.joker17.bizactuator.context.BizSimpleContext;
 import com.joker17.bizactuator.core.BizRichActuator;
-import com.joker17.bizactuator.resolver.BizResolver;
+import com.joker17.bizactuator.resolver.AbstractBizResolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +54,7 @@ public class BizRichActuatorExample {
         }
     }
 
-    static class BizRichExampleResolver extends BizResolver<BizRichExampleParameter, BizSimpleContext<List<String>>, String> {
+    static class BizRichExampleResolver extends AbstractBizResolver<BizRichExampleParameter, BizSimpleContext<List<String>>, String> {
 
         @Override
         public void check(BizRichExampleParameter bizParameter, BizSimpleContext<List<String>> bizContext) {
