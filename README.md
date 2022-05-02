@@ -1,5 +1,8 @@
 ## biz-actuator
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.joker-pper/biz-actuator.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.joker-pper%22%20AND%20a:%22biz-actuator%22)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 ### 背景介绍
 
 + 尝试能够解决在已有复杂业务逻辑的实现下进行代码优化
@@ -13,6 +16,18 @@
 + 能提供通用能力且灵活性高,能支持复杂场景的自定义处理(例:解析器可注册为spring bean不影响所依赖框架的使用)
 
 + 尝试方案记录加备份(重点->备份)...
+
+### 快速使用
+
+```
+
+<dependency>
+  <groupId>io.github.joker-pper</groupId>
+  <artifactId>biz-actuator</artifactId>
+  <version>${version}</version>
+</dependency>
+
+```
 
 ### 使用介绍
 
